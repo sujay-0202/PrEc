@@ -5,48 +5,364 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eccomerce</title>
-    <!-- <style href="{% static 'css/styles.css' %}" >
-    </style> -->
-
-    <!-- i cant get the css files connected to this html -->
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-        * {
-            box-sizing: border-box;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        nav {
-
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/custom.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/tailwind.css' %}">
+    <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css'%}" rel="stylesheet">
+    
 </head>
-<body>
-    <nav>
-        <div>
-            Eccommerce
+<body class="font-sans text-gray-700">
+    <header class=" h-screen flex flex-col">
+        <div class="top bg-white w-sreen">
+            <div class=" px-4 py-3 flex flex-row justify-between items-center">
+                <h1 class="nav-brand flex justify-center items-center text-xl font-mono">Ecco <span class="ml-2 text-red-600">mmerce</span></h1>
+                <nav class="text-blue-500">
+                    <div class="nav-list flex justify-center items-center">
+                        <a href="" class="mx-3 px-6 py-2 rounded-lg border-2 border-blue-400">Home</a>
+                            <a href="" class="mx-3 px-6 py-2 rounded-lg border-2 border-blue-400">Categories<i class="ml-1 text-blue-500 fa fa-arrow-down" aria-hidden="true"></i></a>
+                            <form class="relative" action="" method="GET">
+                                <input class="bg-transparent text-centerrounded-lg border-2 border-blue-400 px-6 py-2 rounded-lg" placeholder="your need?" type="text">
+                                <button type="submit" class="absolute top-2 right-5"><i class="fa fa-search    "></i></button>
+                            </form>
+                            <a href="" class="mx-3 px-6 py-2 rounded-lg border-2 border-blue-400">More<i class="ml-1 text-blue-500 fa fa-arrow-down" aria-hidden="true"></i></a>
+                    </div>
+                </nav>
+                <div class="flex flex-row justify-around items-center w-1/6 text-blue-500">
+                    <div class="flex justify-center items-center">
+                        <a class="rounded-full flex justify-center items-center border-blue-300 border-2 w-10 h-10" href=""><i class="fa fa-save"></i><span>0</span></a>    
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <a class="rounded-full border-blue-300 border-2 w-14 h-14 flex justify-center items-center text-xl block " href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="pl-1">0</span></a>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <a class="rounded-full border-blue-300 border-2 w-10 h-10 flex justify-center items-center" href=""><i class="fa fa-user" aria-hidden="true"></i></a>
+                    </div>
+                    
+                </div>
+        
+            </div>
         </div>
-        <div>
-            <ul>
-                <li>Products</li>
-                <li>Cart</li>
-                <li>Checkout</li>
-                <li>Log-in</li>
-            </ul>
+        <div class="overlay flex items-center h-screen">
+            <div class="h-1/2 flex flex-col justify-center">
+                <h2 class="">Welcome to Eccomerce</h2>
+                <p class="mt-10">Explore our latest products <a class="click" href="#main"><i class="click fa fa-arrow-circle-down" aria-hidden="true"></i></a></p>
+            </div>
         </div>
-    </nav>
-
-    <header>
-
+        <div class="background">
+        </div>
     </header>
+    
+    <main id="main" class="mt-16">
+        <div class="categories">
+            <div class="">
+                <h2 class="text-center">Categories</h2>
 
-    <main>
+            </div>
+            <div class="products flex flex-col md:flex-row flex-wrap md:flex md:justify-around items-center" id="products">
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/appliance.jpg" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Appliance</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/comp-accessories.png" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Computer Assesories</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/Laptop-computer.jpg" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Computers</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/mobile-phone.jpg" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Mobiles</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/pretty-young-stylish-sexy-woman-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio-background-shopping-holding-paper-bags-talking-mobile-phone-shopaholic.jpg" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Women Fashion Wears</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/portrait-of-handsome-smiling-stylish-young-man-model-wearing-jeans-clothes-fashion-man.jpg" alt=""></div>
+                        </div>
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Men Fashion Wears</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end w-full mt-10 md:mr-16">
+                    <a href="" class="px-6 py-2 rounded-lg border-2 border-blue-400">Load More<i class="ml-1 text-blue-500 fa fa-arrow-right" aria-hidden="true"></i></i></a>
+                </div>
+            </div>
+        </div>
 
+        <div class="mt-16 recommended">
+            <div class="">
+                <h2 class="text-center">Recommended</h2>
+
+            </div>
+            <div class="products flex flex-col md:flex-row flex-wrap md:flex md:justify-around items-center" id="products">
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-red-400 text-lg text-red-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-yellow-400 text-lg text-yellow-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-red-400 text-lg text-red-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-yellow-400 text-lg text-yellow-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-red-400 text-lg text-red-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-yellow-400 text-lg text-yellow-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-blue-400 text-lg text-blue-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-red-400 text-lg text-red-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                        
+                    </div>
+                </div>
+                <div class="flex lg:w-1/3 md:w-1/2 w-full justify-center items-center max-w-sm">
+                    <div class="flex justify-center items-center flex-col w-100 m-8 bg-white">
+                        <div class="flex justify-center items-center flex-col px-8 py-6">
+                            <div class=""><img class="" src="assets/img/shoe3.jpg" alt=""></div>
+                            <h3 class="mt-3 text-xl text-center">Blue Men Sneakers</h3>
+                            <p class="text-center mt-3 px-6 font-mono">Blue men sneakers made with silk and brown sole</p>
+                            <h5 class="text-yellow-700 text-xl font-mono">$69</h5>
+                            <div class="mt-2">
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star checked" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                        <a class="add bg-yellow-400 text-lg text-yellow-100 w-full flex justify-center items-center p-2" href="">Add to cart</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end w-full mt-10 md:mr-16">
+                    <a href="" class="px-6 py-2 rounded-lg border-2 border-blue-400">Load More<i class="ml-1 text-blue-500 fa fa-arrow-right" aria-hidden="true"></i></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
     </main>
 
     <footer>
