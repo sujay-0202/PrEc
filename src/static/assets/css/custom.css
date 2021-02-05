@@ -7,6 +7,9 @@ body {
     overflow-x: hidden;
     background-color: rgba(216, 216, 216, 0.256);
 }
+button:focus {
+    outline: 0;
+}
 .background::after {
     position: absolute;
     content: "";
@@ -50,6 +53,6 @@ body h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-.nav-list {
+section div h3 {
     
 }
