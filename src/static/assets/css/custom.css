@@ -7,18 +7,15 @@ body {
     overflow-x: hidden;
     background-color: rgba(216, 216, 216, 0.256);
 }
-.background::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 88vh;
-    left: 0;
-    top: 80px;
-    background-image: url("../img/background.png");
-    background-position: right;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(2px);
+button:focus {
+    outline: 0;
+}
+nav a:hover, nav button:hover {
+    background-color: rgb(35, 105, 19);
+    color: white;
+}
+nav a , nav button {
+    transition: 500ms;
 }
 .overlay {
     z-index: 1;
@@ -50,6 +47,38 @@ body h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-.nav-list {
+hr {
+    color: black;
+}
+.add > div {
+    font-size: 1.5rem;
+    transition-duration:500ms;
+}
+.add:hover div {
+    transform: rotate(-180deg);
+}
+.loader > span {
+    display: inline-block;
+    background-color: rgb(11, 110, 29);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    animation: pounce 0.5s infinite alternate;
+}
+.loader > span:nth-child(2) {
+    background-color: rgb(0, 85, 255);
+    animation-delay: 0.3s ;
     
+}
+.loader > span:nth-child(1) {
+    animation-delay: 0.7s;
+}
+@keyframes pounce {
+    to {
+        width: 30px;
+        height: 30px;
+        transform: sc;
+    }
 }
