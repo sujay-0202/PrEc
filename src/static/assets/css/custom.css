@@ -7,11 +7,23 @@ body {
     overflow-x: hidden;
     background-color: rgba(216, 216, 216, 0.256);
 }
+* {
+    box-sizing: border-box;
+}
 button:focus {
     outline: 0;
 }
+input:focus {
+    outline: 0;
+}
+input {
+    color: gray;
+}
+.nav-list input::placeholder {
+    text-align: center;
+}
 nav a:hover, nav button:hover {
-    background-color: rgb(35, 105, 19);
+    background-color: rgb(72, 125, 60);
     color: white;
 }
 nav a , nav button {
@@ -47,15 +59,29 @@ body h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
+.nav-list > a , .nav-info a {
+    box-shadow: -1px -1px 4px rgba(0, 0, 0, 0.933), 1px 1px 4px rgb(255, 255, 255);
+    background-color: transparent;
+}
+
 hr {
     color: black;
 }
-.add > div {
+.drop-down > a {
+    transition-duration:300ms ;
+}
+.add a > div {
     font-size: 1.5rem;
     transition-duration:500ms;
 }
-.add:hover div {
+.add:hover a > div, .nav-list a:hover i {
     transform: rotate(-180deg);
+}
+.add:hover .drop-down {
+    display: block;
+}
+.loader {
+    z-index: 999;
 }
 .loader > span {
     display: inline-block;
